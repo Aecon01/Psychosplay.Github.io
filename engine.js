@@ -7465,14 +7465,19 @@ var Engine = {
 		
 		//=====================ClickablesIron
 		Engine.Clickables.BuyIronMine = document.getElementById("buyironmine");
-		Engine.Clickables.BuyIronMine.addEventListener("click", function() {
+		Engine.Clickables.BuyIronMine.addEventListener("click", function() {	
 			Engine.BuyAIronMine();
 			return false;
 		});
 		
 		Engine.Clickables.BuyIronContract = document.getElementById("buyironcontract");
 		Engine.Clickables.BuyIronContract.addEventListener("click", function() {
-			Engine.BuyAIronContract();
+			if ( event.ctrlKey ) {
+				Engine.BreakAIronContract();
+			}
+			else{
+				Engine.BuyAIronContract();
+			}
 			return false;
 		});
 		
