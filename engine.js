@@ -50,6 +50,12 @@ Author: Psychos Play
 Thanks to: Neurofluxation
 **********************************************************************/
 
+$(document).keydown(function(event){
+    if(event.which=="17")
+        cntrlIsPressed = true;
+		alert("Test");
+});
+
 var Engine = {
 	
 	Values: {
