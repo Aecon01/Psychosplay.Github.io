@@ -7471,7 +7471,7 @@ var Engine = {
 		});
 		
 		Engine.Clickables.BuyIronContract = document.getElementById("buyironcontract");
-		Engine.Clickables.BuyIronContract.addEventListener("click", function() {
+		Engine.Clickables.BuyIronContract.addEventListener("click", function(event) {
 			if ( event.ctrlKey ) {
 				Engine.BreakAIronContract();
 			}
